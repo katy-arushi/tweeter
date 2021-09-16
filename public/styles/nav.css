@@ -1,0 +1,40 @@
+nav {
+  height: 120px;
+  background-color: #4273a3; 
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5em;
+  padding: 0.5em 1.5em;
+  position: relative;
+
+}
+
+.nav-left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #FFFFFF;
+  margin: 1.5em;
+}
+
+.new-tweet {
+  color: #FFFFFF;
+  margin: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: end;
+}
+
+.fa-angle-double-down {
+  color: red;
+}
