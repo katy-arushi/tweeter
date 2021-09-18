@@ -1,14 +1,12 @@
 nav {
-  height: 120px;
-  background-color: #4273a3; 
-  width: 100vw;
   display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: #4273a3; 
   justify-content: space-between;
   align-items: center;
   padding-left: 1.5em;
   padding: 0.5em 1.5em;
-  position: relative;
-
 }
 
 .nav-left {
@@ -28,13 +26,13 @@ nav {
 }
 
 .new-tweet {
+  display: flex;
   color: #FFFFFF;
   margin: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
   justify-content: end;
 }
 
 .fa-angle-double-down {
-  color: red;
+  color: yellow;
 }

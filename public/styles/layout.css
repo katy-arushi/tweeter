@@ -28,3 +28,14 @@ nav {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+  width: 100%;
+  display: flex;
+  align-content: center;
+  background-color: #82abd1;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+ }

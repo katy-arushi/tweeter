@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
 
 
     <!-- External JS -->
@@ -24,11 +25,13 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
 
+  </head>
+  
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Nav Bar on top with logo and new tweet -->
     <nav>
+
       <div class="nav-left">
         <span class="logo">tweeter</span>
       </div>
@@ -37,19 +40,39 @@
         <span class="new-tweet">Write a new tweet</span>
         <i class="fas fa-angle-double-down"></i>
       </div>
+
     </nav>
 
-  <header>
-    <div>
+  <main class="container">
+
+    <header>
+      <div>
         <img src="/images/profile-hex.png"> 
-    </div>
-    <br>
-    <div>
-      <h2>Arushi Katyal</h2>
-    </div>
-  </header>
+      </div>
+      <br>
+      <div>
+        <h2>Arushi Katyal</h2>
+      </div>
+    </header>
     
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <section class="new-tweet">
+
+      <!-- new tweet -->
+      <h2 class="compose">Compose Tweet</h2>
+      <div class="inner-container">
+        <form action="/tweets" method="POST">
+          <label class="tweet-prompt" for="tweet-text"></label>
+          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+          <div class="tweet-footer">
+            <button class= "tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
   </body>
 </html>

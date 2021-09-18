@@ -1,0 +1,63 @@
+/* styles for the whole new tweet sections */
+.new-tweet {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Tweet Button */
+.tweet-button {
+  font-family: 'Bungee', cursive;
+  background-color: #4273a3; 
+  color: #FFFFFF;
+}
+
+/* idk what this code does */
+/* .new-tweet label {
+  width: 100%;
+  text-align: center;
+} */
+
+/* char counter */
+.counter {
+  font-family: 'Bungee', cursive;
+}
+
+/* tweet promt - what are you humming about*/
+.tweet-prompt {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.inner-container {
+  margin: 0;
+  padding: 0 5em;
+}
+
+.inner-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  border: 0;
+  border-bottom: 2px solid black;
+  margin: 20px 0;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.compose {
+  margin: 0 3.4em;
+}

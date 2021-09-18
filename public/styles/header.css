@@ -1,5 +1,5 @@
 header {
-  height: 800px;
+  height: 600px;
   width: 100%;
   z-index: 1;
   justify-content: center;
@@ -9,4 +9,3 @@ header {
   background-color: #82abd1;
   background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
 }
-
