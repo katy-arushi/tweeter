@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>Tweeter</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -18,6 +18,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -43,36 +44,34 @@
 
     </nav>
 
-  <main class="container">
-
+    
     <header>
       <div>
         <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
         <h2>Arushi Katyal</h2>
       </div>
     </header>
     
-    <!-- Page-specific (main) content here -->
-    <section class="new-tweet">
+    <main class="container">
+      <!-- Page-specific (main) content here -->
+      <section class="new-tweet">
 
-      <!-- new tweet -->
-      <h2 class="compose">Compose Tweet</h2>
-      <div class="inner-container">
-        <form action="/tweets" method="POST">
-          <label class="tweet-prompt" for="tweet-text"></label>
-          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-          <div class="tweet-footer">
-            <button class= "tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
+        <!-- new tweet -->
+        <h2 class="compose">Compose Tweet</h2>
+        <div class="inner-container">
+          <form action="/tweets" method="POST">
+            <label class="tweet-prompt" for="tweet-text"></label>
+            <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+            <div class="tweet-footer">
+              <button class= "tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
   </body>
 </html>

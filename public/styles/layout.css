@@ -21,17 +21,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-nav {
-  font-family: 'Bungee', cursive;
-}
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
  .container {
-  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+  height: 100%;
   width: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
   display: flex;
   align-content: center;
   background-color: #82abd1;
