@@ -1,11 +1,18 @@
 header {
   display: flex;
-  height: 600px;
+  height: 400px;
   width: 100%;
   z-index: 1;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #82abd1;
-  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+}
+
+.logged-in-user-avatar {
+  height: 150px;
+  width: auto;
+}
+
+.logged-in-user-name {
+  font-size: 32px;
 }

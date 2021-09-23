@@ -49,10 +49,10 @@
     
     <header>
       <div>
-        <img src="/images/profile-hex.png"> 
+        <img class="logged-in-user-avatar" src="/images/profile-hex.png"> 
       </div>
       <div>
-        <h2>Arushi Katyal</h2>
+        <h2 class="logged-in-user-name">Arushi Katyal</h2>
       </div>
     </header>
     
@@ -75,17 +75,16 @@
 
       <section class="all-tweets">
         <article class="all-tweets-border">
-          <div class="all-tweets-header">
-            <div>
+            <div class="user-info">
               <div class="tweet-avatar"> 
                 <img src="/images/astronaut.png" id="astronaut-avatar">
+                <div class="user-name"><b>Arushi Katyal</b></div>
               </div>
-              <div class="user-name"><b>Arushi Katyal</b></div>
+              <div class="user-handle"><b>@akatyal</b></div>
             </div>
-            <div class="user-handle"><b>@akatyal</b></div>
-          </div>
-          <p>This is a tweet! I have something to say!</p>
-          <footer class="all-tweets-footer"><b>1 day ago</b>
+          <p class="tweet-body">This is a tweet! I have something to say!</p>
+          <footer class="all-tweets-footer">
+            <div class="time-ago">1 day ago</div>
             <div class="tweet-icons">
             <i id="icon1" class="fas fa-flag"></i>
             <i id="icon2" class="fas fa-retweet"></i>

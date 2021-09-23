@@ -15,10 +15,12 @@ html {
  */
 
 body {
+  height: 100%;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #82abd1;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
 }
 
 /*
@@ -26,12 +28,10 @@ body {
  */
 
  .container {
+  display: flex;
   height: 100%;
   width: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
-  display: flex;
   align-content: center;
-  background-color: #82abd1;
   padding: 0;
   justify-content: center;
   flex-direction: column;

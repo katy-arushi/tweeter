@@ -1,45 +1,68 @@
 .all-tweets {
-  /* height: 150px; */
   display: flex;
   flex-direction: row;
-  padding: 8px;
   margin-top: 30px;
   width: 100%;
 }
 
-.all-tweets-header {
+.all-tweets-footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  border: 2px solid black;
-
 }
 
 .all-tweets-border {
   border: 2px solid white;
 }
 
-article {
-  width: 100%;
-  margin: 0;
-  padding: 0 5em;
+.all-tweets-border:hover {
+  box-shadow: 8px 8px #dede21;
 }
 
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-ago {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+article {
+  width: 100%;
+  margin: 0 5em;
+  padding: 15px;
+}
+
+.tweet-body {
+  color: white;
+  font-weight: bold;
+}
+
+.tweet-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-name {
+  margin-left: 1em;
+}
 
 #astronaut-avatar {
-  height: 120px;
+  height: 80px;
   width: auto;
 }
 
 #icon1:hover{
-  color: yellow;
+  color: #dede21;
 }
 
 #icon2:hover{
-  color: yellow;
+  color: #dede21;
 }
 
 #icon3:hover{
-  color: yellow;
+  color: #dede21;
 }

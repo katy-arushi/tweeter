@@ -25,7 +25,12 @@
 }
 
 .new-tweet-form {
+  padding: 15px;
   border: 2px solid white;
+}
+
+.new-tweet-form:hover {
+  box-shadow: 8px 8px #dede21;
 }
 
 .inner-container {
