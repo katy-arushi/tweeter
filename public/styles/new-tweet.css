@@ -1,5 +1,5 @@
 /* styles for the whole new tweet sections */
-.new-tweet {
+.create-new-tweet {
   display: flex;
   align-content: center;
   width: 100%;
@@ -13,25 +13,23 @@
   color: #FFFFFF;
 }
 
-/* idk what this code does */
-/* .new-tweet label {
-  width: 100%;
-  text-align: center;
-} */
-
 /* char counter */
 .counter {
   font-family: 'Bungee', cursive;
+  color: white;
 }
 
-/* tweet promt - what are you humming about*/
+/* what are you humming about*/
 .tweet-prompt {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.new-tweet-form {
+  border: 2px solid white;
+}
+
 .inner-container {
-  margin: 0;
-  padding: 0 5em;
+  margin: 0 5em;
 }
 
 .inner-container form {
@@ -56,10 +54,6 @@
 ::placeholder {
   color: #FFFFFF;
   font-weight: bold;
-}
-
-.compose {
-  margin: 0 3.4em;
 }
 
 .warningText {
