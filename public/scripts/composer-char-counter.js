@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('#tweet-text').on('input', function(event) {
+  $('#new-tweet-placeholder').on('input', function(event) {
     const maxChars = 140;
     let textArea = event.target;
     let count = $(textArea).val().length;

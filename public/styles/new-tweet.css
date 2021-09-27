@@ -16,7 +16,7 @@
 }
 
 /* styles for the new tweet form */
-.new-tweet-form {
+#new-tweet-form {
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -54,7 +54,7 @@
   color: white;
 }
 
-.new-tweet-form:hover {
+#new-tweet-form:hover {
   box-shadow: 8px 8px #dede21;
 }
 
