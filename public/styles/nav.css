@@ -27,13 +27,13 @@ nav {
 }
 
 /* tweeter logo */
-.logo {
+#logo {
   color: #FFFFFF;
   margin: 1.5em;
 }
 
 /* "write a new tweet" */
-.new-tweet {
+.new-tweet-prompt {
   display: flex;
   color: #FFFFFF;
   margin: 1.5em;

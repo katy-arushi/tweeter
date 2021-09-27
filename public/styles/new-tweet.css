@@ -1,16 +1,51 @@
 /* styles for the whole new tweet sections */
-.create-new-tweet {
+#create-new-tweet {
   display: flex;
   align-content: center;
   width: 100%;
   flex-direction: column;
 }
 
+/* container that holds the form */
+#new-tweet-container {
+  /* display: flex; possibly not needed */
+  flex-direction: column;
+  margin: 0 5em;
+        /* left and right margin of 5em */
+        /* matches all-tweets-border in tweets.css */
+}
+
+/* styles for the new tweet form */
+.new-tweet-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+        /* padding of 15px on all sides */
+        /* matches all-tweets-border in tweets.css */
+  border: 2px solid white;
+}
+
+/* placeholder text for what are you humming about*/
+#new-tweet-placeholder {
+  border: 0;
+  border-bottom: 2px solid black;
+  margin: 20px 0;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* holds submit button and counter */
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Tweet Button */
 .tweet-button {
   font-family: 'Bungee', cursive;
   background-color: #4273a3; 
-  color: #FFFFFF;
+  color: white;
 }
 
 /* char counter */
@@ -19,41 +54,8 @@
   color: white;
 }
 
-/* what are you humming about*/
-.tweet-prompt {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.new-tweet-form {
-  padding: 15px;
-  border: 2px solid white;
-}
-
 .new-tweet-form:hover {
   box-shadow: 8px 8px #dede21;
-}
-
-.inner-container {
-  margin: 0 5em;
-}
-
-.inner-container form {
-  display: flex;
-  flex-direction: column;
-}
-
-.tweet-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-#tweet-text {
-  border: 0;
-  border-bottom: 2px solid black;
-  margin: 20px 0;
-  background-color: transparent;
-  color: #FFFFFF;
-  font-weight: bold;
 }
 
 ::placeholder {

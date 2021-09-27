@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css"/>
 
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -28,45 +27,37 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   </head>
   
   <body>
-    <!-- Nav Bar on top with logo and new tweet -->
+    <!-- nav bar on top with logo and new tweet -->
     <nav>
-
       <div class="nav-left">
-        <span class="logo">tweeter</span>
+        <span id="logo">tweeter</span>
       </div>
 
       <div class="nav-right">
-        <span class="new-tweet">Write a new tweet</span>
+        <span class="new-tweet-prompt">Write a new tweet</span>
         <i class="fas fa-angle-double-down"></i>
       </div>
-
     </nav>
-
     
-    <header>
-      <div>
-        <img class="logged-in-user-avatar" src="/images/profile-hex.png"> 
-      </div>
-      <div>
-        <h2 class="logged-in-user-name">Arushi Katyal</h2>
-      </div>
+    <header id="current-user-header">
+        <img class="current-user-avatar" src="/images/profile-hex.png"> 
+        <h2 class="current-user-name">Arushi Katyal</h2>
     </header>
     
+    <!-- Page-specific (main) content here -->
     <main class="container">
-      <!-- Page-specific (main) content here -->
 
-      <section class="create-new-tweet">
-        <!-- new tweet -->
-        <div class="inner-container">
+      <!-- new tweet -->
+      <section id="create-new-tweet">
+        <div id="new-tweet-container">
           <form class="new-tweet-form" action="/tweets" method="POST">
-            <label class="tweet-prompt" for="tweet-text"></label>
-            <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+            <label for="tweet-text"></label>
+            <textarea id="new-tweet-placeholder" placeholder="What are you humming about?" name="text"></textarea>
             <div class="tweet-footer">
-              <button class= "tweet-button" type="submit">Tweet</button>
+              <button class="tweet-button" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
@@ -75,13 +66,13 @@
 
       <section class="all-tweets">
         <article class="all-tweets-border">
-            <div class="user-info">
+            <header class="tweet-header">
               <div class="tweet-avatar"> 
                 <img src="/images/astronaut.png" id="astronaut-avatar">
                 <div class="user-name"><b>Arushi Katyal</b></div>
               </div>
-              <div class="user-handle"><b>@akatyal</b></div>
-            </div>
+              <b>@akatyal</b>
+            </header>
           <p class="tweet-body">This is a tweet! I have something to say!</p>
           <footer class="all-tweets-footer">
             <div class="time-ago">1 day ago</div>
@@ -92,49 +83,6 @@
           </footer>
         </article>
       </section>
-
-      <section class="all-tweets">
-        <article class="all-tweets-border">
-            <div class="user-info">
-              <div class="tweet-avatar"> 
-                <img src="/images/astronaut.png" id="astronaut-avatar">
-                <div class="user-name"><b>Arushi Katyal</b></div>
-              </div>
-              <div class="user-handle"><b>@akatyal</b></div>
-            </div>
-          <p class="tweet-body">This is a tweet! I have something to say!</p>
-          <footer class="all-tweets-footer">
-            <div class="time-ago">1 day ago</div>
-            <div class="tweet-icons">
-            <i id="icon1" class="fas fa-flag"></i>
-            <i id="icon2" class="fas fa-retweet"></i>
-            <i id="icon3" class="fas fa-heart"></i>
-          </footer>
-        </article>
-      </section>
-
-
-      <section class="all-tweets">
-        <article class="all-tweets-border">
-            <div class="user-info">
-              <div class="tweet-avatar"> 
-                <img src="/images/astronaut.png" id="astronaut-avatar">
-                <div class="user-name"><b>Arushi Katyal</b></div>
-              </div>
-              <div class="user-handle"><b>@akatyal</b></div>
-            </div>
-          <p class="tweet-body">This is a tweet! I have something to say!</p>
-          <footer class="all-tweets-footer">
-            <div class="time-ago">1 day ago</div>
-            <div class="tweet-icons">
-            <i id="icon1" class="fas fa-flag"></i>
-            <i id="icon2" class="fas fa-retweet"></i>
-            <i id="icon3" class="fas fa-heart"></i>
-          </footer>
-        </article>
-      </section>
-
-
 
     </main>
 

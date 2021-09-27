@@ -10,23 +10,18 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Global layout stuff */
 
 body {
   height: 100%;
   color: #545149;
   background-color: #82abd1;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif; /* default font */
   background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+/* container for new tweet form and all tweets */
  .container {
   display: flex;
   height: 100%;

@@ -1,3 +1,4 @@
+/* main container for all tweets */
 .all-tweets {
   display: flex;
   flex-direction: row;
@@ -5,35 +6,41 @@
   width: 100%;
 }
 
-.all-tweets-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
 .all-tweets-border {
   border: 2px solid white;
+  width: 100%;
+  margin: 0 5em;
+          /* left and right margin of 5em */
+          /* matches new-tweet-container in new-tweet.css */
+  padding: 15px;
+          /* padding of 15px on all sides */
+          /* matches new-tweet-form in new-tweet.css */
+  margin-bottom: 30px;
 }
 
-.all-tweets-border:hover {
-  box-shadow: 8px 8px #dede21;
-}
-
-.user-info {
+/* contains avatar, username, and handle */
+.tweet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.time-ago {
-  font-weight: bold;
-  font-size: 20px;
+/* contains avatar and username */
+.tweet-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-article {
-  width: 100%;
-  margin: 0 5em;
-  padding: 15px;
-  margin-bottom: 30px;
+/* user's avatar */
+#astronaut-avatar {
+  height: 80px;
+  width: auto;
+}
+
+/* user's name */
+.user-name {
+  margin-left: 1em;
 }
 
 .tweet-body {
@@ -41,19 +48,19 @@ article {
   font-weight: bold;
 }
 
-.tweet-avatar {
+/* footer contains time ago and icons */
+.all-tweets-footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.user-name {
-  margin-left: 1em;
+.time-ago {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-#astronaut-avatar {
-  height: 80px;
-  width: auto;
+.all-tweets-border:hover {
+  box-shadow: 8px 8px #dede21;
 }
 
 #icon1:hover{

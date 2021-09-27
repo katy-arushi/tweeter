@@ -1,4 +1,4 @@
-header {
+#current-user-header {
   display: flex;
   height: 400px;
   width: 100%;
@@ -9,11 +9,11 @@ header {
   margin-top: 120px;
 }
 
-.logged-in-user-avatar {
+.current-user-avatar {
   height: 150px;
   width: auto;
 }
 
-.logged-in-user-name {
+.current-user-name {
   font-size: 32px;
 }
