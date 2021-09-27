@@ -1,14 +1,14 @@
 /* main container for all tweets */
 #tweets-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 30px;
   width: 100%;
 }
 
 .all-tweets-border {
   border: 2px solid white;
-  width: 100%;
+  width: auto;
   margin: 0 5em;
           /* left and right margin of 5em */
           /* matches new-tweet-container in new-tweet.css */
