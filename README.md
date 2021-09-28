@@ -2,7 +2,11 @@
 
 Tweeter is a simple, single-page Twitter clone focusing on front end, responsive design.
 
-This project uses HTML, CSS, JS, jQuery and AJAX front-end skills, and Node and Express back-end skills.
+This project uses HTML, CSS, JS, jQuery and AJAX for the front-end, and Node & Express for the back-end.
+
+## Purpose
+
+This project was created and published by [Arushi Katyal](https://github.com/katy-arushi) as part of the Web Development Program at [Lighthouse Labs](https://www.lighthouselabs.ca/). 
 
 ## Getting Started
 
