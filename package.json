@@ -1,15 +1,19 @@
 {
   "name": "tweeter",
   "version": "1.0.0",
-  "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
+  "description": "Tweeter is a simple, single-page Twitter clone focusing on front end, responsive design.",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
-  "author": "Lighthouse Labs",
+  "author": "Arushi Katyal",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katy-arushi/tinyapp/issues"
+  },
+  "homepage": "https://github.com/katy-arushi/tinyapp#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
