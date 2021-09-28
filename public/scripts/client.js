@@ -1,4 +1,12 @@
 $(document).ready(() => {
+  
+  // prevent cross site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // function to render all tweets from an array of tweet objects
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -18,7 +26,7 @@ $(document).ready(() => {
           </div>
           <b>${tweet.user.handle}</b>
         </header>
-      <p class="tweet-body">${tweet.content.text}</p>
+      <p class="tweet-body">${escape(tweet.content.text)}</p>
       <footer class="all-tweets-footer">
         <div class="time-ago">${timeago.format(tweet.created_at)}</div>
         <div class="tweet-icons">
