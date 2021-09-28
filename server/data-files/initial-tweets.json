@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1632618349701
+    "created_at": 1632533554559
   },
   {
     "user": {
@@ -19,6 +19,17 @@
     "content": {
       "text": "Je pense, donc je suis"
     },
-    "created_at": 1632704749701
+    "created_at": 1632619954559
+  },
+  {
+    "user": {
+      "name": "Arushi Katyal",
+      "avatars": "/images/astronaut.png",
+      "handle": "@akatyal"
+    },
+    "content": {
+      "text": "I see Earth! It is so beautiful!"
+    },
+    "created_at": 1632706354559
   }
 ]
