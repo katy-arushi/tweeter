@@ -8,18 +8,18 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1632533554559
+    "created_at": 1632600778727
   },
   {
     "user": {
       "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "avatars": "https://i.imgur.com/ilT4JDe.png",
       "handle": "@rd"
     },
     "content": {
       "text": "Je pense, donc je suis"
     },
-    "created_at": 1632619954559
+    "created_at": 1632687178727
   },
   {
     "user": {
@@ -30,6 +30,6 @@
     "content": {
       "text": "I see Earth! It is so beautiful!"
     },
-    "created_at": 1632706354559
+    "created_at": 1632773578727
   }
 ]

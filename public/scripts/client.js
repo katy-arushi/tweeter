@@ -1,12 +1,13 @@
 $(document).ready(() => {
-  
+  // function to render all tweets from an array of tweet objects
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet);
+      const tweetRendered = createTweetElement(tweet); // renders the tweet object into HTML
+      $('#tweets-container').prepend(tweetRendered);
     }
   };
 
+  // function to create HTML element from a tweet object of objects
   const createTweetElement = function(tweet) {
     let $tweet = `
     <article class="all-tweets-border">
@@ -30,18 +31,30 @@ $(document).ready(() => {
     return $tweet;
   };
 
-  const form = $('#new-tweet-form'); // find the element that has this ID
-  form.on('submit', function(event) { // when the form is submitted, run this function, that takes in the event
+  // function that checks if data in form submitted is neither empty nor over 140 chars (tweet char limit), if valid data, posts new tweet and loads tweets async
+  const postTweet = function(event) {
     event.preventDefault(); // prevent the default behaviour of the submit button, which is refreshing the page
-    const serializedData = $(this).serialize();
-    console.log(serializedData);
-    $.post('/tweets', serializedData)
-  });
+    const formData = $('#new-tweet-placeholder').val();
+    const maxChars = 140;
+    if (formData.length === 0) {
+      alert("Error: tweet cannot be empty!");
+    } else if (formData.length > maxChars) {
+      alert("Error: tweet cannot be more than 140 characters!");
+    } else {
+      const serializedData = $(this).serialize();
+      $.post('/tweets', serializedData) // since no error was found and alerted, can post
+        .then(() => loadTweets())
+        .then()
+    }
+  };
+
+  const form = $('#new-tweet-form'); // find the element that has this ID
+  form.on('submit', postTweet); // when the form is submitted, run this function, that takes in the event
 
   const loadTweets = function() {
-    $.ajax({ url: '/tweets', method: 'GET' })
-    .then(result => renderTweets(result))
-    .catch(error => console.log(`Error:`, error));
+    $.get('/tweets')
+      .then(result => renderTweets(result))
+      .catch(error => console.log('Error:', error));
   };
 
   loadTweets();
