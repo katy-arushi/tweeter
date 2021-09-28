@@ -43,9 +43,13 @@ $(document).ready(() => {
     } else {
       const serializedData = $(this).serialize();
       $.post('/tweets', serializedData) // since no error was found and alerted, can post
-        .then(() => loadTweets())
-        .then()
-    }
+        .then(() => {
+          $('#tweets-container').empty();
+          $('#new-tweet-placeholder').val('');
+          $('.counter').first().val(140);
+          loadTweets();
+        });
+    };
   };
 
   const form = $('#new-tweet-form'); // find the element that has this ID
