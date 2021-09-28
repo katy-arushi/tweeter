@@ -27,31 +27,22 @@ $(document).ready(() => {
       </footer>
     </article>
     `;
-
     return $tweet;
   };
 
-  const form = $('new-tweet-form'); // find the element that has this ID
-
+  const form = $('#new-tweet-form'); // find the element that has this ID
   form.on('submit', function(event) { // when the form is submitted, run this function, that takes in the event
     event.preventDefault(); // prevent the default behaviour of the submit button, which is refreshing the page
-
     const serializedData = $(this).serialize();
     console.log(serializedData);
-
     $.post('/tweets', serializedData)
-
-    
-    // $.ajax({
-    //   url: '/tweets',
-    //   method: "POST",
-    //   data: serializedData,
-    //   success: (posts) => {
-    //     console.log(posts);
-    //   },
-    //   error: () => {
-    //     console.log(error);  
-    //   },
-    // });
   });
+
+  const loadTweets = function() {
+    $.ajax({ url: '/tweets', method: 'GET' })
+    .then(result => renderTweets(result))
+    .catch(error => console.log(`Error:`, error));
+  };
+
+  loadTweets();
 });
