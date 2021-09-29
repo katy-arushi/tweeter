@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
@@ -50,7 +50,10 @@
     
     <!-- Page-specific (main) content here -->
     <main class="container">
-
+      <!-- alert for tweet posting errors -->
+      <div class="alert">
+        <div class="inner-alert-text"></div>
+      </div>
       <!-- write new tweet -->
       <section id="create-new-tweet">
         <div id="new-tweet-container">
@@ -60,9 +63,6 @@
             <div class="tweet-footer">
               <button class="tweet-button" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-            <div class="alert">
-              <div class="inner-alert-text"></div>
             </div>
           </form>
         </div>

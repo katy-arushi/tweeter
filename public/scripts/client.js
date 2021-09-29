@@ -46,12 +46,16 @@ $(document).ready(() => {
     const formBorder = $('#new-tweet-form')
 
     if (formData.length === 0) {
-      $('div.alert').html('<p>Error: tweet cannot be empty!</p>')
+      $('div.alert').html('<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>Error: tweet cannot be empty!<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>');
+      $('div.alert').addClass('alert-styles');
+      
       formBorder.css("border-color", "#c22121");
       formBorder.css("border-width", "4px");
-
+      
     } else if (formData.length > maxChars) {
-      $('div.alert').html('<p>Error: tweet cannot be more than 140 characters!</p>')
+      $('div.alert').html('<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>Error: tweet cannot be more than 140 characters!<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>')
+      $('div.alert').addClass('alert-styles');
+
       formBorder.css("border-color", "#c22121");
       formBorder.css("border-width", "4px");
 

@@ -67,7 +67,15 @@
   color: #c22121;
 }
 
-.alert {
+.alert-styles {
   color: #c22121;
-  font-weight: bold;
+  font-weight: 400;
+  margin: 0 5em;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  border: 4px solid #c22121;
+}
+
+#icon-alert {
+  padding: 0 10px;
 }
