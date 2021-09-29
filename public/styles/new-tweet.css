@@ -64,5 +64,10 @@
 }
 
 .warningText {
-  color: red;
+  color: #c22121;
+}
+
+.alert {
+  color: #c22121;
+  font-weight: bold;
 }
