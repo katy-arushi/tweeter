@@ -45,9 +45,11 @@ $(document).ready(() => {
     const formData = $('#new-tweet-placeholder').val();
     const maxChars = 140;
     if (formData.length === 0) {
-      alert("Error: tweet cannot be empty!");
+      //alert("Error: tweet cannot be empty!");
+      $('div.alert').html('<p>Error: tweet cannot be empty!</p>')
     } else if (formData.length > maxChars) {
-      alert("Error: tweet cannot be more than 140 characters!");
+      //alert("Error: tweet cannot be more than 140 characters!");
+      $('div.alert').html('<p>Error: tweet cannot be more than 140 characters!</p>')
     } else {
       const serializedData = $(this).serialize();
       $.post('/tweets', serializedData) // since no error was found and alerted, can post
