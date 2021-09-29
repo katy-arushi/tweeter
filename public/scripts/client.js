@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  
   // prevent cross site scripting
   const escape = function (str) {
     let div = document.createElement("div");
@@ -44,12 +43,18 @@ $(document).ready(() => {
     event.preventDefault(); // prevent the default behaviour of the submit button, which is refreshing the page
     const formData = $('#new-tweet-placeholder').val();
     const maxChars = 140;
+    const formBorder = $('#new-tweet-form')
+
     if (formData.length === 0) {
-      //alert("Error: tweet cannot be empty!");
       $('div.alert').html('<p>Error: tweet cannot be empty!</p>')
+      formBorder.css("border-color", "#c22121");
+      formBorder.css("border-width", "4px");
+
     } else if (formData.length > maxChars) {
-      //alert("Error: tweet cannot be more than 140 characters!");
       $('div.alert').html('<p>Error: tweet cannot be more than 140 characters!</p>')
+      formBorder.css("border-color", "#c22121");
+      formBorder.css("border-width", "4px");
+
     } else {
       const serializedData = $(this).serialize();
       $.post('/tweets', serializedData) // since no error was found and alerted, can post
