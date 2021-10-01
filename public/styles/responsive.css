@@ -1,0 +1,27 @@
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* for screens bigger than 1024 / desktop */
+/* starts from 1024, up to anything 
+less specific, takes less precedence
+*/
+@media screen and (min-width: 1024px) {
+  .tweet-container {
+    margin-top: 150px;
+  }
+  #current-user-header {
+    width: 45%;
+    height: auto;
+  }
+}
+
+/* this is for sizes 0 to 1024
+tablet and mobile sizing */
+@media screen and (max-width: 1023px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+}

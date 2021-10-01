@@ -1,6 +1,6 @@
 #current-user-header {
   display: flex;
-  height: 400px;
+  height: 350px;
   width: 100%;
   z-index: 1;
   justify-content: center;
@@ -17,3 +17,4 @@
 .current-user-name {
   font-size: 32px;
 }
+

@@ -3,6 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -16,6 +20,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,39 +48,40 @@
       </div>
     </nav>
     
-    <header id="current-user-header">
-        <img class="current-user-avatar" src="/images/profile-hex.png"> 
-        <h2 class="current-user-name">Arushi Katyal</h2>
-    </header>
+    <div class="content-container">
+      <header id="current-user-header">
+          <img class="current-user-avatar" src="/images/profile-hex.png"> 
+          <h2 class="current-user-name">Arushi Katyal</h2>
+      </header>
+
     
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <!-- alert for tweet posting errors -->
-      <div class="alert">
-        <div class="inner-alert-text"></div>
-      </div>
-      <!-- write new tweet -->
-      <section id="create-new-tweet">
-        <div id="new-tweet-container">
-          <form id="new-tweet-form" action="/tweets" method="POST">
-            <label for="tweet-text"></label>
-            <textarea id="new-tweet-placeholder" placeholder="What are you humming about?" name="text"></textarea>
-            <div class="tweet-footer">
-              <button class="tweet-button" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
+      <!-- Page-specific (main) content here -->
+      <main class="tweet-container">
+        <!-- alert for tweet posting errors -->
+        <div class="alert">
+          <div class="inner-alert-text"></div>
         </div>
-      </section>
-      
-      <!-- display all tweet -->
-      <section id="tweets-container">
-        
-        <!-- in this section, tweets are displayed dynamically from client.js -->
 
-      </section>
+        <!-- write new tweet -->
+        <section id="create-new-tweet">
+          <div id="new-tweet-container">
+            <form id="new-tweet-form" action="/tweets" method="POST">
+              <label for="tweet-text"></label>
+              <textarea id="new-tweet-placeholder" placeholder="What are you humming about?" name="text"></textarea>
+              <div class="tweet-footer">
+                <button class="tweet-button" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </div>
+        </section>
 
-    </main>
+          <!-- display all tweets -->
+        <section id="tweets-container">
+          <!-- in this section, tweets are displayed dynamically from client.js -->
+        </section>
 
+      </main>
+    </div>
   </body>
 </html>

@@ -22,7 +22,7 @@ body {
 }
 
 /* container for new tweet form and all tweets */
- .container {
+ .tweet-container {
   display: flex;
   height: 100%;
   width: 100%;
@@ -30,4 +30,5 @@ body {
   padding: 0;
   justify-content: center;
   flex-direction: column;
+  /* margin-top: 150px; */
  }
