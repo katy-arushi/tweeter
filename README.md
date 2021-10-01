@@ -7,6 +7,10 @@ This project uses HTML, CSS, JS, jQuery and AJAX for the front-end, and Node & E
 This project was created and published by [Arushi Katyal](https://github.com/katy-arushi) as part of the Web Development Program at [Lighthouse Labs](https://www.lighthouselabs.ca/). 
 
 ## Screenshots
+!["Tweeter Desktop"](https://github.com/katy-arushi/tweeter/blob/master/docs/desktop.png?raw=true)
+!["Tweeter Tablet"](https://github.com/katy-arushi/tweeter/blob/master/docs/tablet.png?raw=true)
+!["Tweeter Mobile"](https://github.com/katy-arushi/tweeter/blob/master/docs/mobile.png?raw=true)
+!["Tweeter Error](https://github.com/katy-arushi/tweeter/blob/master/docs/errorTweetTooLong.png?raw=true)
 
 ## Getting Started
 1. Install dependencies using the `npm install` command.
