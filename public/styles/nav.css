@@ -9,7 +9,9 @@ nav {
   padding-left: 1.5em;
   padding: 0.5em 1.5em;
   font-family: 'Bungee', cursive;
+  /* styles below make the nav bar fixed */
   position: fixed;
+  z-index: 1;
   top: 0;
 }
 
