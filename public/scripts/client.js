@@ -1,6 +1,17 @@
 $(document).ready(() => {
+
+  const errorAlert = function(errorMsg) {
+    const formBorder = $('#new-tweet-form');
+    $('div.alert').html(`<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>${errorMsg}<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>`)
+    $('div.alert').addClass('alert-styles');
+    $('div.alert').hide().slideDown();
+  
+    formBorder.css("border-color", "#c22121");
+    formBorder.css("border-width", "4px");
+  };
+
   // prevent cross site scripting
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -43,23 +54,12 @@ $(document).ready(() => {
     event.preventDefault(); // prevent the default behaviour of the submit button, which is refreshing the page
     const formData = $('#new-tweet-placeholder').val();
     const maxChars = 140;
-    const formBorder = $('#new-tweet-form')
-
+    
     if (formData.length === 0) {
-      $('div.alert').html('<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>Error: tweet cannot be empty!<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>');
-      $('div.alert').addClass('alert-styles');
-      $('div.alert').hide().slideDown();
-      
-      formBorder.css("border-color", "#c22121");
-      formBorder.css("border-width", "4px");
+      errorAlert('Error: tweet cannot be empty!');
       
     } else if (formData.length > maxChars) {
-      $('div.alert').html('<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>Error: tweet cannot be more than 140 characters!<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>')
-      $('div.alert').addClass('alert-styles');
-      $('div.alert').hide().slideDown();
-
-      formBorder.css("border-color", "#c22121");
-      formBorder.css("border-width", "4px");
+      errorAlert('Error: tweet cannot be more than 140 characters!');
 
     } else {
       const serializedData = $(this).serialize();
@@ -70,7 +70,7 @@ $(document).ready(() => {
           $('.counter').first().val(140);
           loadTweets();
         });
-    };
+    }
   };
 
   const form = $('#new-tweet-form'); // find the element that has this ID

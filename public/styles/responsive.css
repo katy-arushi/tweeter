@@ -20,7 +20,7 @@ less specific, takes less precedence
   #current-user-header {
     margin: 0 5em;
     width: 33%;
-    height: auto;
+    height: 35em;
   }
   .content-container {
     flex-direction: row;
