@@ -2,11 +2,11 @@ $(document).ready(() => {
   $('#new-tweet-placeholder').on('input', function(event) {
     const maxChars = 140;
     $('div.alert').empty().removeClass('alert-styles')
-    let textArea = event.target;
-    let count = $(textArea).val().length;
-    let charsLeft = (maxChars - count);
+    const textArea = event.target;
+    const count = $(textArea).val().length;
+    const charsLeft = (maxChars - count);
     const formBorder = $('#new-tweet-form')
-    let counter = $(textArea).next().find('output'); // classes are re-used, could have a side effect
+    const counter = $(textArea).next().find('output'); // classes are re-used, could have a side effect
     counter.text(charsLeft);
     if (charsLeft < 0) { // for making the counter red
       counter.addClass("warningText"); // better practice to add a class rather than in line css style
@@ -19,6 +19,3 @@ $(document).ready(() => {
     }
   });
 });
-
-// find() goes inward, children
-// closest() goes upward the tree
