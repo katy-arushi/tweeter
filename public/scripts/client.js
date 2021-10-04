@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-  const errorAlert = function(errorMsg) {
+  const showErrorAlert = function(errorMsg) {
     const formBorder = $('#new-tweet-form');
     $('div.alert').html(`<p><i id="icon-alert" class="fas fa-exclamation-triangle"></i>${errorMsg}<i id="icon-alert" class="fas fa-exclamation-triangle"></i></p>`)
     $('div.alert').addClass('alert-styles');
@@ -49,6 +49,12 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  const loadTweets = function() {
+    $.get('/tweets')
+      .then(result => renderTweets(result))
+      .catch(error => console.log('Error:', error));
+  };
+
   // function that checks if data in form submitted is neither empty nor over 140 chars (tweet char limit), if valid data, posts new tweet and loads tweets async
   const postTweet = function(event) {
     event.preventDefault(); // prevent the default behaviour of the submit button, which is refreshing the page
@@ -56,10 +62,10 @@ $(document).ready(() => {
     const maxChars = 140;
     
     if (formData.length === 0) {
-      errorAlert('Error: tweet cannot be empty!');
+      showErrorAlert('Error: tweet cannot be empty!');
       
     } else if (formData.length > maxChars) {
-      errorAlert('Error: tweet cannot be more than 140 characters!');
+      showErrorAlert('Error: tweet cannot be more than 140 characters!');
 
     } else {
       const serializedData = $(this).serialize();
@@ -67,7 +73,7 @@ $(document).ready(() => {
         .then(() => {
           $('#tweets-container').empty();
           $('#new-tweet-placeholder').val('');
-          $('.counter').first().val(140);
+          $('.counter').first().val(maxChars);
           loadTweets();
         });
     }
@@ -75,12 +81,6 @@ $(document).ready(() => {
 
   const form = $('#new-tweet-form'); // find the element that has this ID
   form.on('submit', postTweet); // when the form is submitted, run this function, that takes in the event
-
-  const loadTweets = function() {
-    $.get('/tweets')
-      .then(result => renderTweets(result))
-      .catch(error => console.log('Error:', error));
-  };
 
   loadTweets();
 });
